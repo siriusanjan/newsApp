@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/card_background_gray" />
+
+    <ImageView
+        android:id="@+id/img_rasi"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/ic_close_black_24dp" />
+
+    <TextView
+        android:id="@+id/txt_rasi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_rasi"
+        android:layout_alignBottom="@+id/img_rasi"
+        android:layout_toRightOf="@+id/img_rasi"
+        android:gravity="center_vertical"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="Mesh"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/txt_rasi_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txt_rasi_title"
+        android:layout_alignBottom="@+id/txt_rasi_title"
+        android:layout_toRightOf="@+id/txt_rasi_title"
+        android:gravity="center_vertical"
+        android:textSize="15dp"
+        android:paddingStart="5dp"
+        android:text="afasdf" />
+
+    <TextView
+        android:id="@+id/txt_rasi_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_rasi"
+        android:layout_alignStart="@+id/txt_rasi_title"
+        android:textColor="@color/black"
+        android:paddingBottom="5dp"/>
+
+
+</RelativeLayout>

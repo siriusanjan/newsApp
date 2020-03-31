@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zeptune.nepali_swipe_news">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:logo="@mipmap/ic_launcher_foreground"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.zeptune.nepali_swipe_news.test_news_pakages.CoronaActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="com.zeptune.nepali_swipe_news.test_news_pakages.TestSplashActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreenSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.zeptune.nepali_swipe_news.test_news_pakages.TestMainActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.zeptune.nepali_swipe_news.test.TestActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8562845792538150~5082921007" />
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="News" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value=".nepali_swipe_news.parentview.parentFragment.news_display.utils.model_class.DatumForDatabase,             .nepali_swipe_news.parentview.parentFragment.news_display.utils.model_class.DatumListModelForDatabase,             .nepali_swipe_news.parentview.parentFragment.news_display.utils.model_class.AllNewsDatabase,             .nepali_swipe_news.models.Datum,.news.parentview.parentFragment.news_display.utils.model_class.MetaDataForDatabase" />
+
+        <activity android:name="com.zeptune.nepali_swipe_news.CategoryActivity" />
+        <activity android:name="com.zeptune.nepali_swipe_news.retrofit.retofit.testActivityPackage.ServerActivity" />
+        <activity android:name="com.zeptune.nepali_swipe_news.MainActivity" />
+        <activity android:name="com.zeptune.nepali_swipe_news.SplashActivity" />
+        <activity
+            android:name="com.zeptune.nepali_swipe_news.dialogue_activity.ShowDetailActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert.FullScreen" />
+
+        <service android:name="com.zeptune.nepali_swipe_news.fcm_app.NotificationSerivces">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.activeandroid.content.ContentProvider"
+            android:authorities="${applicationId}"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/loading_screen_wrapper"
+>
+
+    <LinearLayout
+        android:id="@+id/loading_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_archive_black_24dp"/>
+        <TextView
+            android:id="@+id/txt_loading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading...."
+            android:layout_gravity="center"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/oops_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_oops_err"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:id="@+id/txt_oops_err_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not completely Loaded "
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"/>
+        <Button
+            android:id="@+id/btn_reload_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reload"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            />
+        <TextView
+            android:id="@+id/txt_skip_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip For Now"
+            android:textSize="20sp"
+            android:textColor="@color/third_sub_background"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            />
+    </LinearLayout>
+
+</FrameLayout>

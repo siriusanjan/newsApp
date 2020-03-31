@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/monthViewCard"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/white"
+	android:gravity="center_vertical"
+	android:padding="3dp">
+
+
+	<TextView
+		android:id="@+id/txt_monthView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="12dp"
+		android:textColor="@color/black"
+		android:textSize="15dp" />
+
+
+</LinearLayout>

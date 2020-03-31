@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/tools">
+    <Transition
+        app:constraintSetStart="@id/swipe_up"
+        app:constraintSetEnd="@id/swipe_down"
+     >
+<!--        <OnSwipe-->
+<!--            app:dragDirection="dragDown"-->
+<!--            app:touchAnchorId="@id/viewpagerWrapper"-->
+<!--            app:touchAnchorSide="top" />-->
+    </Transition>
+
+
+
+    <ConstraintSet android:id="@+id/swipe_up">
+        <Constraint
+            android:id="@+id/layout_top_news_display_items"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintDimensionRatio="H,5:4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+        <CustomAttribute
+            app:attributeName="imageAlpha"
+            app:customIntegerValue="100" />
+        </Constraint>
+<!--        <Constraint-->
+<!--            android:id="@+id/test_text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.0" />-->
+
+        <Constraint
+            android:id="@+id/viewpagerWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_top_news_display_items"
+            />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/swipe_down">
+        <Constraint
+            android:id="@+id/layout_top_news_display_items"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/viewpagerWrapper"
+           >
+        <CustomAttribute
+            app:attributeName="imageAlpha"
+            app:customIntegerValue="0" />
+        </Constraint>
+<!--        <Constraint-->
+<!--            android:id="@+id/test_text"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+        <Constraint
+            android:id="@+id/viewpagerWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_top_news_display_items"
+             />
+    </ConstraintSet>
+</MotionScene>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="dimpink">#f4efd3</color>
+    <color name="deepblue">#092a35</color>
+    <color name="lightgreen">#cfee91</color>
+    <color name="deepgreen">#658525</color>
+    <color name="lightpink">#f8eeb4</color>
+
+
+    <color name="pink">#f64c73</color>
+    <color name="soft_sky_blue">#2db7a5</color>
+    <color name="soft_green">#388e3c</color>
+    <color name="light_green">#0c9463</color>
+    <color name="purpe">#5c328f</color>
+    <color name="deep_vlot">#fc822a</color>
+    <color name="lightbue">#3395ff</color>
+    <color name="whitish">#FAFAFA</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="red">#d63447</color>
+    <color name="lignt_red">#c81912</color>
+    <color name="secondRed">#f57b51</color>
+    <color name="goldRed">#de7119</color>
+
+    //menu Fragment color
+    <color name="card_wrapper_head_color">#ebd395</color>
+    <color name="card_background_white">#ffffff</color>
+    <color name="card_background_gray">#EFEDE3</color>
+    <color name="text_color">#625944</color>
+    <color name="third_sub_background">#dea006</color>
+    <color name="status_bar">#e0dcc1</color>
+    <color name="colorBlack">#000000</color>
+</resources>

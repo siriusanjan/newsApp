@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_gold_silver"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5dp"
+    android:background="@drawable/bottom_sheet_style"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp">
+
+
+    <LinearLayout
+        android:id="@+id/gold_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_gold_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_close_black_24dp" />
+
+        <TextView
+            android:id="@+id/txt_title_gold_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@+id/img_gold_close"
+            android:padding="5dp"
+            android:text="Gold Price"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/txt_gold_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableEnd="@drawable/ic_replay_black_24dp"
+            android:gravity="end"
+            android:textColor="@color/black"
+            android:paddingRight="10dp"
+            android:text="Update" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/date_ads_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gold_tool"
+        android:background="@color/white"
+        android:padding="2dp"
+        android:orientation="vertical">
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adsGoldSilver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_real_ads" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/wrapper_gold_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_ads_wrapper"
+        android:background="@color/white"
+        android:padding="10dp"
+>
+
+        <TextView
+            android:id="@+id/txt_hallmark_gold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/txt_hallmark_gold_price"
+            android:layout_alignParentStart="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@color/whitish"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_hallmark_gold_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txt_hallmark_gold"
+            android:layout_alignBottom="@+id/txt_hallmark_gold"
+            android:background="@color/whitish"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black"
+            android:text="1000"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/txt_Tajabi_gold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_hallmark_gold"
+            android:layout_toLeftOf="@+id/txt_hallmark_gold_price"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignParentStart="true"
+            android:text="Gold Tajabi - tola ( तेजाबी सुन )"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_Tajabi_gold_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txt_Tajabi_gold"
+            android:layout_alignBottom="@+id/txt_Tajabi_gold"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:textColor="@color/black"
+            android:paddingEnd="10dp"
+            android:text="1000"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/txt_Hallmark_gold_gram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_Tajabi_gold"
+            android:background="@color/whitish"
+            android:layout_toLeftOf="@+id/txt_Hallmark_gold_gram_price"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Gold Hallmark - 10g ( छापावाल सुन )"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_Hallmark_gold_gram_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/whitish"
+            android:layout_alignTop="@+id/txt_Hallmark_gold_gram"
+            android:layout_alignBottom="@+id/txt_Hallmark_gold_gram"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="1000"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/txt_Tajabi_gold_gram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_Hallmark_gold_gram"
+            android:layout_toLeftOf="@+id/txt_Tajabi_gold_gram_price"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignParentStart="true"
+            android:text="Gold Tajabi - 10g ( तेजाबी सुन )"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_Tajabi_gold_gram_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txt_Tajabi_gold_gram"
+            android:layout_alignBottom="@+id/txt_Tajabi_gold_gram"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:textColor="@color/black"
+            android:paddingEnd="10dp"
+            android:text="1000"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/txt_Silver_tola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_Tajabi_gold_gram"
+            android:background="@color/whitish"
+            android:layout_toLeftOf="@+id/txt_Tajabi_gold_gram_price"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignParentStart="true"
+            android:text="Gold Tajabi - 10g ( तेजाबी सुन )"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_silver_tola_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/whitish"
+            android:layout_alignTop="@+id/txt_Silver_tola"
+            android:layout_alignBottom="@+id/txt_Silver_tola"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="1000"
+            android:textSize="16sp" />
+
+
+
+        <TextView
+            android:id="@+id/txt_Silver_gram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_Silver_tola"
+            android:layout_toLeftOf="@+id/txt_Tajabi_gold_gram_price"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Gold Tajabi - 10g ( तेजाबी सुन )"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_silver_gram_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txt_Silver_gram"
+            android:layout_alignBottom="@+id/txt_Silver_gram"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black"
+            android:text="1000"
+            android:textSize="16sp" />
+        <!--        <TextView-->
+        <!--            android:id="@+id/txt_see_all_gold_prices"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@+id/txt_Tajabi_gold_gram_price"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:drawableBottom="@drawable/ic_keyboard_arrow_down_black_24dp"-->
+        <!--            android:drawablePadding="-10dp"-->
+        <!--            android:paddingStart="10dp"-->
+        <!--            android:paddingEnd="10dp"-->
+        <!--            android:text="See All"-->
+        <!--            android:textColor="@color/lightbue"-->
+        <!--            android:textSize="16sp"/>-->
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/gold_loading_screen"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Updating...."
+            android:textColor="@color/lightbue"
+            android:layout_marginTop="50dp"
+            />
+    </FrameLayout>
+</RelativeLayout>

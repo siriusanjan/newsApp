@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/search_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:focusable="true"
+        android:hint="Search For country"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:imeOptions="actionDone"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+</LinearLayout>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/tools">
+
+
+    <ConstraintSet android:id="@+id/expanded">
+        <Constraint
+            android:id="@+id/parentTablayout"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/imgMenu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            />
+        <Constraint
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/back_img_height_barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <Constraint
+            android:id="@+id/back_img_height_barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="parentTablayout"/>
+        <Constraint
+            android:id="@id/jstForBrarriarHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgMenu"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <Constraint
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="jstForBrarriarHelper"
+            app:layout_constraintStart_toEndOf="parent" />
+
+        <Constraint
+            android:id="@+id/imgSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:src="@drawable/ic_settings_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/imgMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_navigate_before_black_24dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <Constraint
+            android:id="@+id/imgTowardsNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <Constraint
+            android:id="@+id/img_refreshNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_navigate_before_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            />
+        <Constraint
+            android:id="@+id/img_gototop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/parentTablayout"
+            app:layout_constraintHorizontal_bias="0.95"/>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/collapsed">
+        <Constraint
+            android:id="@+id/parentTablayout"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:visibility="visible"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <Constraint
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/back_img_height_barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <Constraint
+            android:id="@+id/back_img_height_barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="parentTablayout"/>
+        <Constraint
+            android:id="@+id/imgTowardsNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <Constraint
+            android:id="@id/jstForBrarriarHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            >
+        </Constraint>
+        <Constraint
+            android:id="@+id/imgSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_settings_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Constraint
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="jstForBrarriarHelper"
+            app:layout_constraintStart_toEndOf="parent" >
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/imgMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:src="@drawable/ic_navigate_before_black_24dp"
+            />
+        <Constraint
+            android:id="@+id/img_refreshNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/parentTablayout"
+            app:layout_constraintHorizontal_bias="0.95"
+            />
+
+        <Constraint
+            android:id="@+id/img_gototop"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/parentTablayout"
+            app:layout_constraintHorizontal_bias="0.95"/>
+
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/touchTohide">
+        <Constraint
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/back_img_height_barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <Constraint
+            android:id="@+id/back_img_height_barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="parentTablayout"/>
+        <Constraint
+            android:id="@+id/imgTowardsNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <Constraint
+            android:id="@id/jstForBrarriarHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            >
+        </Constraint>
+        <Constraint
+            android:id="@+id/imgSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_settings_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Constraint
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="jstForBrarriarHelper"
+            app:layout_constraintStart_toEndOf="parent" >
+        </Constraint>
+        <Constraint
+            android:id="@+id/parentTablayout"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorColor="@color/colorPrimaryDark"
+            app:tabMinWidth="100dp"
+
+            app:tabSelectedTextColor="@color/colorPrimaryDark"
+            app:tabTextColor="@color/black" />
+        <Constraint
+            android:id="@+id/imgMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_navigate_before_black_24dp"
+            />
+        <Constraint
+            android:id="@+id/img_refreshNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/parentTablayout"
+            app:layout_constraintHorizontal_bias="0.95"
+            />
+
+        <Constraint
+            android:id="@+id/img_gototop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/parentTablayout"
+            app:layout_constraintHorizontal_bias="0.95"/>
+
+
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/showtap">
+        <Constraint
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/back_img_height_barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Constraint
+            android:id="@+id/back_img_height_barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="parentTablayout"/>
+
+
+        <Constraint
+            android:id="@+id/imgTowardsNews"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <Constraint
+            android:id="@id/jstForBrarriarHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            >
+        </Constraint>
+        <Constraint
+            android:id="@+id/imgSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_settings_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Constraint
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="jstForBrarriarHelper"
+            app:layout_constraintStart_toEndOf="parent" >
+        </Constraint>
+        <Constraint
+            android:id="@+id/parentTablayout"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorColor="@color/colorPrimaryDark"
+            app:tabMinWidth="100dp"
+            app:tabSelectedTextColor="@color/colorPrimaryDark"
+            app:tabTextColor="@color/black" />
+        <Constraint
+            android:id="@+id/imgMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:src="@drawable/ic_navigate_before_black_24dp"
+            />
+        <Constraint
+            android:id="@+id/img_refreshNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/parentTablayout"
+            app:layout_constraintHorizontal_bias="0.95"
+            />
+
+        <Constraint
+            android:id="@+id/img_gototop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/parentTablayout"
+            app:layout_constraintHorizontal_bias="0.95"/>
+    </ConstraintSet>
+
+
+</MotionScene>

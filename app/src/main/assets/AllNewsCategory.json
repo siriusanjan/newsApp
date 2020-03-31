@@ -1,0 +1,40 @@
+{
+   "data":[
+      {
+         "name":"Top Stories",
+         "code":"tops"
+      },
+      {
+         "name":"Politics",
+         "code":"pltc"
+      },
+      {
+         "name":"Sports",
+         "code":"sprt"
+      },
+      {
+         "name":"Technology",
+         "code":"scte"
+      },
+      {
+         "name":"World",
+         "code":"wrld"
+      },
+      {
+         "name":"Business",
+         "code":"busi"
+      },
+      {
+         "name":"Entertainment",
+         "code":"entm"
+      },
+      {
+         "name":"Health",
+         "code":"hlth"
+      },
+      {
+         "name":"Uncategorized",
+         "code":"oths"
+      }
+   ]
+}

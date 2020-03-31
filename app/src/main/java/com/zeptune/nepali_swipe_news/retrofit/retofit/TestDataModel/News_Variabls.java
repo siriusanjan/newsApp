@@ -1,0 +1,15 @@
+package com.zeptune.nepali_swipe_news.retrofit.retofit.TestDataModel;
+
+public class News_Variabls {
+        public static String BASEURL_CATEGORY="https://news.apso.cf";
+        public static String NEWS_WEBSITE_URL_STRING;
+        //Strings
+        public static String MY_PREFS_NAME ="notifire";
+        public static String Log_IN_TOKEN ="notifire";
+        public static String TestToken="Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImVhN2Q2ZDEzOTM1NjEyZDFkMGEyNTZkZTU1YWZmMTNiYzQzODczMDBjMzQ0MDEyZTlmZTEzMmVjNThlZTJiMDIxYWY2YzQ1ZTRhOTliNjI2In0.eyJhdWQiOiIyIiwianRpIjoiZWE3ZDZkMTM5MzU2MTJkMWQwYTI1NmRlNTVhZmYxM2JjNDM4NzMwMGMzNDQwMTJlOWZlMTMyZWM1OGVlMmIwMjFhZjZjNDVlNGE5OWI2MjYiLCJpYXQiOjE1NjUzMjc1ODMsIm5iZiI6MTU2NTMyNzU4MywiZXhwIjoxNTk2OTQ5OTgzLCJzdWIiOiIxOSIsInNjb3BlcyI6W119.bf0hOtoxZ9xFK73hysCPDP59w8vDZYhysA0XN0yqbY9ghV_L5Gwq-DG2i5Fw-sybnSylNp2Ud3XaBV_hxiJH_mHHlAfgCSTm7scj6sU8fe3VQlFUKdxDxUVllWs8duPrOIIosSrUgeeXxAa8Fmu7cJCLeJ9EVLFvIUngd7ZOy7CMFp_0FpDRKK43oylr3gbHo4qycPp6FzFT2wNOqyD_84TJiexpVUfTROl8NUMIsAt4O7PRLlSfUaaTSOt8sIS9-c_cBPhqYLPYDkxuQGyw3VXpt6RsiL0Tvkt-Oby9uuO09LgXdxbzrf1VY7eszVf_eiXvjtR_MjCKy-B0L1-AluHZ7IwMRwQ5AbnKzqRMcSir08de2iUHpkGITbPsvOEftJm41zU9gg0xLIR8mn9ueRYE0WpvwtzjH7AtxPKuszkzSrr04dN49e_0XZZvDfac5cUGfesT7iuL772ZkI3horPGqaKDdshOfG60HK1MR_iHHwXHsqICzfDGtdpUEW7p32CZgAbFLsPBYp0cVgx6C_7s5FS3prngFJo5P-6eJ3T493EMBEzw9K_0p5IWujDlxadGsxOAkxD1ZX6UlgicXEPTpUO7tmeWB53bRiNXECpmucDm5QO8jCKkfMYxs1BiaSU4jtKcxdASnXR6BQHYbZtb64_L5LVD2rxB3_3pmzU";
+public enum TYPE
+{
+        RASIFAL_TYPE,GOLD_TYPE;
+}
+
+}

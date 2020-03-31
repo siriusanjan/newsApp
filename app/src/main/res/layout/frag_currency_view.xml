@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/btm_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_currency_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_close_black_24dp" />
+
+        <TextView
+            android:id="@+id/txt_title_rasifal_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="Currency Exchange Rates"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/txt_currency_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:drawableEnd="@drawable/ic_replay_black_24dp"
+            android:drawablePadding="5dp"
+            android:gravity="end"
+            android:padding="5dp"
+            android:paddingEnd="10dp"
+            android:text="Update"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/date_ads_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btm_toolbar"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="23 Ashoj 2076 Saturday"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adsCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_real_ads" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/txt_columns_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_ads_wrapper"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/txt_currency_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Currency"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/txt_value_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="Value"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/txt_buy_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="Buy"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/txt_sell_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="Sell"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/white"
+        android:layout_below="@+id/txt_columns_wrapper"
+
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_currency_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/currency_loading_screen"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Updating...."
+            android:textColor="@color/lightbue" />
+    </FrameLayout>
+</RelativeLayout>

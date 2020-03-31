@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:weightSum="9">
+
+            <TextView
+                android:id="@+id/title_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:text="Date"
+                android:textColor="@color/pink"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_Nepali_Month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_Date"
+                android:layout_alignTop="@+id/txt_day_of_the_week"
+                android:layout_alignBottom="@+id/txt_day_of_the_week"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/txt_day_of_the_week"
+                android:gravity="center"
+                android:text="Basishakh"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_Nepali_Day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_Date"
+                android:layout_alignTop="@+id/txt_day_of_the_week"
+                android:layout_alignBottom="@+id/txt_day_of_the_week"
+                android:layout_toEndOf="@+id/txt_Nepali_Month"
+                android:paddingStart="5dp"
+                android:text="20, "
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_Nepali_Year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_Date"
+                android:layout_alignTop="@+id/txt_day_of_the_week"
+                android:layout_alignBottom="@+id/txt_day_of_the_week"
+                android:layout_toEndOf="@+id/txt_Nepali_Day"
+                android:gravity="center"
+                android:text="2078"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_day_of_the_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_Date"
+                android:layout_marginStart="5dp"
+                android:text="Wednesday, "
+                android:textColor="@color/soft_green"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/title_rasifal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_day_of_the_week"
+                android:layout_marginStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Aaja ko Rasifal"
+                android:textColor="@color/pink"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/title_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewScrollWrapper"
+                android:layout_marginStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="News Fields"
+                android:textColor="@color/pink"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/recyclerViewScrollWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_rasifal"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rasifal_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                     />
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/all_category_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/recyclerViewScrollWrapper"
+                android:layout_marginTop="38dp"
+                android:paddingBottom="?attr/actionBarSize" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_real_ads" />
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/adViewMenuNewsDetail">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_newsDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/newsLinkDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white" />
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <ProgressBar
+                android:id="@+id/progress_Bar_webview"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100" />
+
+            <LinearLayout
+                android:id="@+id/layout_website_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar_newsDetail">
+
+                <WebView
+                    android:id="@+id/website_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </WebView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/myNewsDetailFrame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:layout_below="@id/toolbar_newsDetail"
+                >
+
+                <ImageView
+                    android:id="@+id/img_err_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/img_oops_err" />
+
+                <TextView
+                    android:id="@+id/txt_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Internet Connection"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btn_reload_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reload"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewMenuNewsDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_real_ads" />
+</RelativeLayout>

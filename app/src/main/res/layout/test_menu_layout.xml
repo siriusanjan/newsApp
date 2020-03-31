@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_view_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/status_bar">
+
+
+    <LinearLayout
+        android:id="@+id/layout_features_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_sub_wrapper_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-25dp"
+            app:cardBackgroundColor="@color/card_background_white"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="25dp">
+
+                <TextView
+                    android:id="@+id/txt_features_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:text="Features"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_nav_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt_features_title"
+                    android:layout_alignBottom="@+id/txt_features_title"
+                    android:layout_alignParentEnd="true"
+                    android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+                    android:drawableTint="@color/lightbue"
+                    android:gravity="center"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="25dp"
+                    android:text="News"
+                    android:textColor="@color/lightbue"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_date_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/lightbue"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+
+                <TextView
+                    android:id="@+id/txt_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:lines="1"
+                    android:paddingEnd="8dp"
+                    android:text="29"
+                    android:textColor="@color/white"
+                    android:textSize="48sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txt_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:paddingEnd="5dp"
+                            android:text="Magh "
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_year"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:text="2076"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_day_of_the_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:text="Wednesday"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--            <RelativeLayout-->
+            <!--                android:id="@+id/date_wrapper"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="?attr/actionBarSize"-->
+            <!--                android:background="@color/third_sub_background"-->
+            <!--                android:paddingStart="10dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/date_title"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:paddingStart="20dp"-->
+            <!--                    android:paddingTop="5dp"-->
+            <!--                    android:paddingBottom="2dp"-->
+            <!--                    android:text="Date"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="18dp" />-->
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/img_underline_date_title"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="2dp"-->
+            <!--                    android:layout_below="@id/date_title"-->
+            <!--                    android:layout_marginStart="20dp"-->
+            <!--                    android:layout_toLeftOf="@+id/txt_year"-->
+            <!--                    android:background="@color/white" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_year"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_alignParentEnd="true"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--                    android:padding="10dp"-->
+            <!--                    android:text="2076 BS"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="20sp" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_day_of_the_week"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/img_underline_date_title"-->
+            <!--                    android:paddingStart="20dp"-->
+            <!--                    android:paddingEnd="2sp"-->
+            <!--                    android:text="Wednesday,"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="16sp" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_month"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/img_underline_date_title"-->
+            <!--                    android:layout_toRightOf="@id/txt_day_of_the_week"-->
+            <!--                    android:paddingEnd="2sp"-->
+            <!--                    android:text="Ashar"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="16sp" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/txt_day"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_below="@+id/img_underline_date_title"-->
+            <!--                    android:layout_toRightOf="@+id/txt_month"-->
+            <!--                    android:text=" 24"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:textSize="16sp" />-->
+            <!--            </RelativeLayout>-->
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_open_corona_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_date_wrapper"
+            android:visibility="gone"
+            android:layout_gravity="end"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="-10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingBottom="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/ripple_next"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:paddingStart="1dp"
+                android:paddingEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/corona_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/virus"
+                    android:backgroundTint="@color/pink"
+                    android:focusableInTouchMode="true" />
+
+                <TextView
+                    android:id="@+id/corona_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_toEndOf="@id/corona_image"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="10dp"
+                    android:text="Corona Status"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/corona_death"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/corona_title"
+                    android:layout_toEndOf="@id/corona_image"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/death_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/circle_red"
+                        android:drawablePadding="5dp"
+                        android:gravity="end"
+                        android:paddingEnd="10dp"
+                        android:text="Total Death"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_death_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/corona_cases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/corona_death"
+                    android:layout_toEndOf="@id/corona_image"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/case_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/circle"
+                        android:drawablePadding="5dp"
+                        android:gravity="end"
+                        android:paddingEnd="10dp"
+                        android:text="Total Cases"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/cases_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_wrapper_rasifal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_date_wrapper"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+
+            <LinearLayout
+                android:id="@+id/rasfal_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_next"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="4dp">
+
+
+                    <TextView
+                        android:id="@+id/rasifal_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="2dp"
+                        android:text="Aaja ko Rasifal"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_underline_rasifal_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/rasifal_title"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/black"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_underline_rasifal_title"
+                    android:paddingStart="10dp"
+                    android:paddingTop="1dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_rasi_short"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:background="@drawable/aries" />
+
+                    <TextView
+                        android:id="@+id/txt_rasifal_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/img_rasi_short"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@id/img_rasi_short"
+                        android:padding="4dp"
+                        android:paddingEnd="4dp"
+                        android:text="Methon"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_rasi_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/txt_rasifal_title"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:layout_toEndOf="@+id/txt_rasifal_title"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="Please click Update"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rasifal_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_underline_rasifal_title"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/txt_see_all_rasifal"
+                    style="@style/NewsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/rasifal_recycler_view"
+                    android:layout_alignEnd="@id/rasifal_recycler_view"
+                    android:clickable="false"
+                    android:text="View All"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/txt_update_rasifal"
+                    style="@style/NewsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/rasifal_recycler_view"
+                    android:layout_alignStart="@id/rasifal_recycler_view"
+                    android:text="update"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_gold_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_wrapper_rasifal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="-10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+
+            >
+
+
+            <LinearLayout
+                android:id="@+id/gold_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_next"
+                android:orientation="vertical"
+                android:paddingStart="35dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/title_gold_silver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center_vertical"
+                    android:text="Gold Silver Price"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+                <RelativeLayout
+                    android:id="@+id/wrapper_silver_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_gold_silver"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/txt_Silver_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/txt_silver_first_price"
+                        android:paddingTop="5dp"
+                        android:text="Silver - tola ( चाँदी )"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_silver_first_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/txt_Silver_first"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="15dp"
+                        android:text="1000"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/txt_silver_second_gram"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_Silver_first"
+                        android:layout_marginTop="12dp"
+                        android:layout_toLeftOf="@+id/txt_silver_gram_second_price"
+                        android:text="Silver - 10g ( चाँदी )"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt_silver_gram_second_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/txt_silver_second_gram"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="15dp"
+                        android:text="1000"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/txt_see_all_silver_prices"
+                    style="@style/NewsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/wrapper_silver_price"
+                    android:layout_alignEnd="@+id/wrapper_silver_price"
+                    android:clickable="false"
+                    android:text="View All"
+                    android:visibility="gone" />
+
+                <!--                <Button-->
+                <!--                    android:id="@+id/update_gold_silver_price"-->
+                <!--                    style="@style/NewsButton"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:layout_below="@+id/wrapper_silver_price"-->
+                <!--                    android:layout_alignStart="@+id/wrapper_silver_price"-->
+                <!--                    android:text="update"-->
+                <!--                    android:visibility="gone" />-->
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottom_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="-25dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/status_bar"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp">
+
+            <FrameLayout
+                android:id="@+id/mynativeAdFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="30dp"
+                android:scaleType="centerCrop" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_currency_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="-25dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp"
+
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/currency_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/ripple_next"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txt_currency_title_wrapper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Currency Exchange Rate"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/updateCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txt_currency_title_wrapper"
+                    android:layout_alignBottom="@+id/txt_currency_title_wrapper"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toEndOf="@+id/txt_currency_title_wrapper"
+                    android:drawableRight="@drawable/ic_replay_blue_24dp"
+                    android:gravity="center"
+                    android:text="Update" />
+
+                <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ad_features"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_currency_title_wrapper"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banner_real_ads" />
+
+
+                <LinearLayout
+                    android:id="@+id/txt_columns_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ad_features"
+                    android:padding="8dp"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/txt_currency_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Currency"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/txt_value_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="Value"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/txt_buy_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="Buy"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/txt_sell_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="Sell"
+                        android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_currency_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_columns_wrapper" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/recycler_currency_recycler_view"
+                    android:layout_alignParentEnd="true"
+                    android:text="Tap to see all rates" />
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

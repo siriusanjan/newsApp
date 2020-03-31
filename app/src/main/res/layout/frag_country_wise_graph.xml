@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/graph_wrapper">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bar_chart_country_wise"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+         />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bar_chart_country_wise_second"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="195dp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/button_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="@color/lignt_red" />
+
+            <TextView
+                android:id="@+id/btn_Death_wise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:gravity="center"
+                android:text="Death Wise Graph"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/btn_cases_wise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:background="@color/deep_vlot"
+                android:gravity="center"
+                android:text="Cases Wise Graph"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="@color/deep_vlot" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/lignt_red" />
+
+    </LinearLayout>
+    <RadioGroup
+        android:checkedButton="@+id/radio_death"
+        android:id="@+id/toggle_radio"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/radio_outline"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/radio_death"
+            android:background="@drawable/selector_radio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Death wise Graph"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:id="@+id/radio_case"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Cases Wise Graph"
+            android:textColor="@color/black" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+>
+
+        <TextView
+            android:id="@+id/txt_death_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/circle_red"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Death"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/txt_case_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/circle"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="Cases"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/txt_recover_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:text="Recover"
+            android:textColor="@color/black" />
+
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/country_list_recycler_View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/search_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_alignBottom="@id/graph_wrapper"
+        android:layout_marginBottom="10dp"
+        android:background="@null"
+        android:backgroundTint="@null"
+        android:elevation="0dp"
+        android:src="@drawable/ic_search_black_24dp"
+        app:backgroundTint="@color/lightbue"
+        app:elevation="0dp" />
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rasifal_imageCard"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/rasifal_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            app:backgroundTint="@color/white" />
+
+        <TextView
+            android:id="@+id/rasifal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rasifal_img"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+

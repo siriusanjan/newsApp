@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/dateConverter_main_layout"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/white"
+	android:descendantFocusability="afterDescendants"
+	android:focusable="true"
+	android:focusableInTouchMode="true"
+	android:orientation="vertical"
+	android:padding="4dp">
+
+
+
+
+
+	<LinearLayout
+		android:id="@+id/ad_editTextWrapper"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_toEndOf="@+id/ad_title"
+		android:clickable="true"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:orientation="horizontal"
+		android:padding="8dp"
+		android:paddingStart="0dp"
+		android:weightSum="3"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent">
+
+
+
+		<EditText
+			android:id="@+id/english_year"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:cursorVisible="false"
+			android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+			android:hint="Year"
+			android:imeOptions="actionNext"
+			android:inputType="number"
+			android:maxLength="4"
+			android:nextFocusForward="@+id/english_month"
+			android:padding="4dp"
+			android:textAlignment="center" />
+
+
+		<EditText
+			android:id="@+id/english_month"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:cursorVisible="false"
+			android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+			android:focusable="true"
+			android:focusableInTouchMode="true"
+			android:hint="month"
+			android:padding="4dp"
+			android:textAlignment="center">
+
+		</EditText>
+
+
+		<EditText
+			android:id="@+id/english_day"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:cursorVisible="false"
+			android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+			android:focusable="true"
+			android:hint="Day"
+			android:inputType="number"
+			android:padding="4dp"
+			android:textAlignment="center" />
+
+
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/ad_day_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/ad_editTextWrapper"
+		android:layout_alignParentRight="true"
+		android:layout_marginEnd="20dp"
+		android:background="@color/browser_actions_bg_grey"
+		android:paddingLeft="8dp"
+		android:paddingRight="8dp"
+		android:text="Sunday"
+		android:textColor="@color/white"
+		android:textSize="16sp"
+		android:textStyle="italic"
+		android:visibility="visible"
+		app:layout_constraintBottom_toTopOf="@+id/bs_title"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.9"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/ad_editTextWrapper" />
+	<TextView
+		android:id="@+id/ad_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:focusable="true"
+
+		android:drawablePadding="3dp"
+		android:text="AD"
+		android:layout_alignBottom="@+id/ad_editTextWrapper"
+		android:layout_alignTop="@+id/ad_editTextWrapper"
+		android:gravity="center_vertical"
+		android:textAlignment="center"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		android:visibility="visible" />
+
+	<ImageView
+		android:id="@+id/img_swap"
+		android:layout_width="32dp"
+		android:layout_height="32dp"
+		android:layout_below="@id/ad_title"
+		android:layout_centerHorizontal="true"
+		android:tint="#8D8C8C" />
+
+
+	<TextView
+		android:id="@+id/bs_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="BS"
+		android:drawablePadding="3dp"
+		android:textAlignment="center"
+		android:layout_alignBottom="@+id/bs_editTextWrapper"
+		android:layout_alignTop="@+id/bs_editTextWrapper"
+		android:gravity="center_vertical"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		android:layout_below="@id/img_swap"
+		android:visibility="visible" />
+
+	<LinearLayout
+		android:id="@+id/bs_editTextWrapper"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/img_swap"
+		android:layout_toEndOf="@+id/bs_title"
+		android:orientation="horizontal"
+		android:padding="8dp"
+		android:paddingStart="0dp"
+		android:weightSum="3"
+>
+
+		<EditText
+			android:id="@+id/nepali_year"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:cursorVisible="false"
+			android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+			android:hint="Year"
+			android:imeOptions="actionNext"
+			android:inputType="number"
+			android:maxLength="4"
+			android:minWidth="48dp"
+			android:padding="4dp"
+			android:textAlignment="center" />
+
+
+		<EditText
+			android:id="@+id/nepali_month"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:cursorVisible="false"
+			android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+			android:focusable="true"
+			android:hint="Month"
+			android:padding="4dp"
+			android:textAlignment="center" />
+
+		<EditText
+			android:id="@+id/nepali_day"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:cursorVisible="false"
+			android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+			android:focusable="true"
+			android:hint="Day"
+			android:inputType="number"
+			android:padding="4dp"
+			android:textAlignment="center" />
+
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/bs_day_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/bs_editTextWrapper"
+		android:layout_alignParentRight="true"
+		android:layout_marginEnd="20dp"
+		android:background="@color/browser_actions_bg_grey"
+		android:paddingLeft="8dp"
+		android:paddingRight="8dp"
+		android:text="Sunday"
+		android:textColor="@color/white"
+		android:textSize="16sp"
+		android:textStyle="italic"
+		android:visibility="visible"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.9"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/bs_editTextWrapper" />
+
+
+</RelativeLayout>
