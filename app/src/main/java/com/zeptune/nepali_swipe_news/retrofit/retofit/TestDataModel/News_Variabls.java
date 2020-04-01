@@ -1,7 +1,7 @@
 package com.zeptune.nepali_swipe_news.retrofit.retofit.TestDataModel;
 
 public class News_Variabls {
-        public static String BASEURL_CATEGORY="https://news.apso.cf";
+        public static String BASEURL_CATEGORY="https://news.apso.cf/api/";
         public static String NEWS_WEBSITE_URL_STRING;
         //Strings
         public static String MY_PREFS_NAME ="notifire";

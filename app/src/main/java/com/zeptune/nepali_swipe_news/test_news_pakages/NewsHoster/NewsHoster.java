@@ -98,15 +98,15 @@ public class NewsHoster extends BaseNewsHoster {
             public void onPageSelected(int position) {
                 NewsHoster.super.performbackPress(position);
                 if (position == 2) {
-                    setUpIntrestialAd();
+//                    setUpIntrestialAd();
                     testNewsFragment.setSwipeToLeftUI(false);
                     newsDetailFragment.loadUrl();
                 } else if (position == 1) {
-                    if (mInterstitialAd != null) {
-                        if (mInterstitialAd.isLoaded()) {
-                            mInterstitialAd.show();
-                        }
-                    }
+//                    if (mInterstitialAd != null) {
+//                        if (mInterstitialAd.isLoaded()) {
+//                            mInterstitialAd.show();
+//                        }
+//                    }
                     testNewsFragment.showSwipeUpGuide();
                     newsDetailFragment.clearWebview();
                 } else {

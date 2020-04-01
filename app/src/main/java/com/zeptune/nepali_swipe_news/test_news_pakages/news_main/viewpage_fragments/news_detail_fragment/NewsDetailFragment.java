@@ -193,7 +193,7 @@ public class NewsDetailFragment extends BaseNewsDetailFragment implements NewsIn
 
 
         setWebClient();
-        loadBannerAds();
+//        loadBannerAds();
         return view;
     }
 

@@ -149,7 +149,7 @@ public class TestVerticalAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             adViewNew = itemView.findViewById(R.id.adViewNew);
             relative_news_wrapper = itemView.findViewById(R.id.relative_news_wrapper);
             news_show_err_layout = itemView.findViewById(R.id.news_show_err_layout);
-            loadAds();
+//            loadAds();
 
         }
 

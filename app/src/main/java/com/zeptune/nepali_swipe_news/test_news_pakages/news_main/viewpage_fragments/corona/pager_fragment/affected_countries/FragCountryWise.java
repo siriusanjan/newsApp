@@ -62,7 +62,7 @@ public class FragCountryWise extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.frag_country_wise, container, false);
         initUI();
-        initAd();
+//        initAd();
         return view;
     }
 
@@ -122,7 +122,7 @@ public class FragCountryWise extends Fragment {
 
 //        getEntries();
         setUpViewpager();
-        setUpIntrestialAd();
+//        setUpIntrestialAd();
         tabListener();
 
     }
