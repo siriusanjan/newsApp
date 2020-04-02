@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "129169420428",
+    "firebase_url": "https://nepali-news-information-hub.firebaseio.com",
+    "project_id": "nepali-news-information-hub",
+    "storage_bucket": "nepali-news-information-hub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129169420428:android:6e096ca41068d7de800ba9",
+        "android_client_info": {
+          "package_name": "com.zeptune.nepali_swipe_news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129169420428-adfea8jh4fcetpj7tobe8g1e181hdua5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe3fxVZBJnZ5UyBB6282kCOetv0ryqRpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129169420428-adfea8jh4fcetpj7tobe8g1e181hdua5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

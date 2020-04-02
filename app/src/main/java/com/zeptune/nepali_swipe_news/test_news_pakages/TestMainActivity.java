@@ -1,5 +1,6 @@
 package com.zeptune.nepali_swipe_news.test_news_pakages;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -15,11 +16,17 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import com.zeptune.nepali_swipe_news.R;
 import com.zeptune.nepali_swipe_news.all_interfaces.InterfaceFragmentToogle;
 import com.zeptune.nepali_swipe_news.date_converter.converter.ConvertAdToBs;
 import com.zeptune.nepali_swipe_news.date_converter.interface_date.NepaliDateInterface;
 import com.zeptune.nepali_swipe_news.retrofit.retofit.TestDataModel.DateModel;
+import com.zeptune.nepali_swipe_news.retrofit.retofit.TestDataModel.News_Variabls;
 import com.zeptune.nepali_swipe_news.retrofit.retofit.TestDataModel.corona_data_model.CaseDataModel;
 import com.zeptune.nepali_swipe_news.retrofit.retofit.TestDataModel.corona_data_model.country_wise.CountryWiseListModel;
 import com.zeptune.nepali_swipe_news.test_news_pakages.NewsHoster.BaseNewsHoster;
@@ -51,6 +58,11 @@ public class TestMainActivity extends AppCompatActivity implements InterfaceFrag
     private Fragment fragment;
     private static boolean POP_IN_SAVE_INSTANCE = false;
     private static boolean COMMIT_NEW_FRAGMENT = false;
+    //remote config
+    private FirebaseRemoteConfig mFirebaseRemoteConfig;
+    private FirebaseRemoteConfigSettings configSettings;
+    private long cacheExpiration = 3600L;
+
 
 
     @Override
@@ -61,6 +73,7 @@ public class TestMainActivity extends AppCompatActivity implements InterfaceFrag
         monthFormat = new SimpleDateFormat("MM");
         date = new Date();
         setTodaydate();
+        initRemoteConfig();
 
 //        CoronaNetworkCall.getContryWiseCoronaState(NewsVariables.NewsOrCoronaTypesEnum.CORONA_COUNTRY_WISE_STATE, new CoroCountryWiseDatabaseUtils.OnDatabaseChangeListener() {
 //            @Override
@@ -240,6 +253,35 @@ public class TestMainActivity extends AppCompatActivity implements InterfaceFrag
         }
 
     }
+
+    //remote cache expiration;
+    public long getCacheExpiration() {
+        return cacheExpiration;
+    }
+
+
+    private void initRemoteConfig() {
+        mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
+        configSettings = new FirebaseRemoteConfigSettings.Builder().setMinimumFetchIntervalInSeconds(3600L).build();
+        mFirebaseRemoteConfig.setConfigSettingsAsync(configSettings);
+        mFirebaseRemoteConfig.setDefaults(R.xml.remote_config_defaults);
+        mFirebaseRemoteConfig.fetch(getCacheExpiration()).addOnCompleteListener(this, new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    mFirebaseRemoteConfig.fetchAndActivate();
+                } else {
+                    Log.d("FireBaseConfig", "error in intial");
+                }
+                String serverUrl = mFirebaseRemoteConfig.getString(getString(R.string.firebase_server_key));
+                //set baseurl to static variable
+                News_Variabls.BASEURL_CATEGORY = serverUrl;
+                System.out.println("server name" + String.valueOf(serverUrl));
+
+            }
+        });
+    }
+
 
 
     @Override

@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.google.firebase.FirebaseApp;
+
 public class TestSplashActivity extends AppCompatActivity {
     public static final int SPLASH_TIMEOUT = 100;
 
@@ -29,6 +31,7 @@ public class TestSplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+     FirebaseApp.initializeApp(this);
 
 
         startActivity(new Intent(TestSplashActivity.this, TestMainActivity.class));
